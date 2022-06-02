@@ -16,7 +16,7 @@ const dataBelanjaan = [
     id: "F-00010",
     nama: "leminerale galon",
     harga: 19000,
-    kuantitas: 1,
+    kuantitas: 2,
   },
 ];
 
