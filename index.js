@@ -2,29 +2,39 @@
 const dataBelanjaan = [
   {
     id: "D-10001",
-    nama: "Minyak Goreng Delima",
-    harga: 25000,
+    nama: "Minyak Goreng Garing",
+    harga: 27000,
     kuantitas: 2,
   },
   {
     id: "D-10020",
-    nama: "Beras Mamos",
-    harga: 48000,
+    nama: "Beras Patil Lele",
+    harga: 53000,
     kuantitas: 1,
   },
   {
     id: "F-00010",
-    nama: "Larutan Cap Kaki Empat",
-    harga: 7500,
-    kuantitas: 8,
+    nama: "leminerale galon",
+    harga: 19000,
+    kuantitas: 1,
   },
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = null;
+const listBelanjaan = (dataBelanjaTemp) => {
+  return dataBelanjaTemp.map((dataBelanja) => {
+    return `- ${dataBelanja.nama} x ${dataBelanja.kuantitas}`;
+  });
+};
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = null;
+const totalBelanjaan = (dataBelanjaTemp) => {
+  let total = 0
+  for (const i in dataBelanjaTemp) {
+    total = total + (dataBelanjaTemp[i].harga * dataBelanjaTemp[i].kuantitas)
+  }
+  return total
+};
 
 // ! JANGAN DIMODIFIKASI
 const main = () => {
